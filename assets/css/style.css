@@ -1,4 +1,7 @@
-#todo-error{
+#todo-error {
   color: red;
   font-size: 2em;
+}
+.row-ht {
+  min-height: 75vh;
 }

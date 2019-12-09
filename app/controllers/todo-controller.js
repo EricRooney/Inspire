@@ -7,17 +7,21 @@ function _drawTodos() {}
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
+    console.log("Where's");
+    store.subscribe("tasks", _drawTodos);
     TodoService.getTodos();
   }
 
-  async addTodo(e) {
-    e.preventDefault();
-    var form = e.target;
+  async addTodo(event) {
+    event.preventDefault();
+    var form = event.target;
+
     var todo = {
-      //TODO build the todo object from the data that comes into this method
+      name: form.name.value
     };
     try {
       await TodoService.addTodoAsync(todo);
+      await TodoService.getTodos();
     } catch (error) {
       debugger;
       console.error("[ERROR]:", error);
