@@ -62,6 +62,7 @@ export default class TodoController {
       description: form.name.value
     };
     console.log(todo);
+    document.getElementById("formStuffs").value = "";
 
     try {
       await TodoService.addTodoAsync(todo);
