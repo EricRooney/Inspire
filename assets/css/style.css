@@ -5,3 +5,7 @@
 .row-ht {
   min-height: 75vh;
 }
+.list-color {
+  background-color: silver;
+  color: rgb(15, 84, 233);
+}

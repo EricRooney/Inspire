@@ -21,11 +21,15 @@
 <div class="row d-flex justify-content-center align-items-center row-ht">
     <div class="col-6 text-center h-auto">
         <h3>ToDo List</h3>
+        <h5 id="total"></h5>
         <div id="todo-error"></div>
         <form onsubmit="app.todoController.addTodo(event)">
-        <input type="text" placeholder="Type Task Here" class="form-control" name="name">
+        <input type="text" placeholder="Type Task Here" class="form-control" name="name"><button>Add Task!</button>
         </form>
-        <div id="todos"></div>
+        <div class="list-color">
+          <ul id="todos">
+          </ul>
+        </div>
       </div>
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
